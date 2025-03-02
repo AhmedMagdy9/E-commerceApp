@@ -1,0 +1,32 @@
+
+<app-navbar></app-navbar>
+
+
+
+<div class="min-h-[100vh]  pt-16">
+
+   <div class=" grid max-2xl:grid-cols-2 md:grid-cols-3 gap-y-5  py-7 dark:bg-gray-900 bg-gray-100">
+
+   <div class="text-center">
+
+    <button class="bg-indigo-900 p-2  rounded-md text-white" (click)="changeLang('en')">{{"english" | translate }}</button>
+    <button class="bg-indigo-900 p-2 mx-1 rounded-md text-white" (click)="changeLang('ar')">{{"arabic" | translate }}</button>
+   </div>
+
+   
+    <div  class="text-center ">
+        <button class="p-2 rounded-md bg-indigo-900 text-white dark:text-black dark:bg-white" (click)="toogile()"><i class="fa-solid fa-sun text-2xl"></i></button>
+      </div>
+          
+    <div  class="  text-center ">
+      <button routerLink="/changepass" class="p-2 rounded-md bg-indigo-900 text-white " >{{"Change Password" | translate }}</button>
+    </div>
+
+   </div>
+
+    <router-outlet></router-outlet>
+</div>
+
+<ngx-spinner type="ball-scale-multiple"></ngx-spinner>
+
+<app-footer></app-footer>

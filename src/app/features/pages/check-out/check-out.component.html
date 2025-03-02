@@ -1,0 +1,35 @@
+
+<div class=" lg:w-7/12  shadow-2xl rounded-lg p-8 mx-auto my-10 ">
+
+    <h1 class="text-4xl text-center py-3 text-green-700">Fill Your Adress</h1>
+
+<form  [formGroup]="checkOutForm"  >
+
+    <div #details class="mb-6">
+        <label for="default-input" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">details</label>
+        <input formControlName="details" type="text" id="default-input" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-green-500 focus:border-green-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-green-500 dark:focus:border-green-500">
+    
+    
+    </div>  
+
+    <div #city class="mb-6">
+        <label for="default-input" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">city</label>
+        <input formControlName="city" type="text" id="default-input" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-green-500 focus:border-green-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-green-500 dark:focus:border-green-500">
+    
+    
+    </div>  
+
+    <div #phone class="mb-6">
+        <label for="default-input" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Phone</label>
+        <input formControlName="phone" type="text" id="default-input" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-green-500 focus:border-green-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-green-500 dark:focus:border-green-500">
+
+
+    </div>
+    <div class="text-center flex justify-around">
+  
+        <button (click)="checkOut()" class="btnSub ">check Out</button>
+        <button (click)="cashOrder()" class="btnSub ">cash  order</button>
+        </div>
+</form>
+</div>
+

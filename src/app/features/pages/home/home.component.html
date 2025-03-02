@@ -1,0 +1,34 @@
+
+
+
+<div class="w-10/12 m-auto py-10">
+
+  
+
+
+   <app-owlcarousel [allProduct]="allProduct"></app-owlcarousel>
+   <app-loopcrsal  [allProduct]="allProduct" ></app-loopcrsal>
+
+    
+<div class="w-1/2 mx-auto py-8">
+
+ 
+    <input [(ngModel)]="searchInput" placeholder="Search Here" type="text" id="default-input" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-green-500 focus:border-green-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-green-500 dark:focus:border-green-500">
+
+</div>
+<div class="grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10">
+
+@for (product of allProduct; track $index) {
+
+    @if (product.title.toLocaleLowerCase().includes(searchInput.toLocaleLowerCase())) {
+
+    <app-card   [oneproduct]="product"></app-card>
+    }
+
+}
+
+
+
+    </div>
+
+</div>
